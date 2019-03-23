@@ -31,5 +31,20 @@ namespace CPRG214.Marina.Domain
             }
             return tempSlip;
         }
+        public static List<Slip> relatedSlips(int Id)
+        {
+            List<Slip> tempSlip = new List<Slip>();
+            foreach (Slip s in Slips)
+            {
+                
+                    if (s.DockID == Id)
+                    {
+                        tempSlip.Add(s);
+                    }
+                
+            }
+            return tempSlip;
+        }
+
     }
 }

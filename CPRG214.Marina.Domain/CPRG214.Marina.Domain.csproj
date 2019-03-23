@@ -45,7 +45,9 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerManager.cs" />
     <Compile Include="Dock.cs" />
+    <Compile Include="DockManager.cs" />
     <Compile Include="Lease.cs" />
+    <Compile Include="LeaseManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Slip.cs" />
     <Compile Include="SlipManager.cs" />
