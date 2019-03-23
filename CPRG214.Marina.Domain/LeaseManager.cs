@@ -17,7 +17,7 @@ namespace CPRG214.Marina.Domain
         public static List<Lease> LeaseHistory(int customerId)
         {
             List<Lease> tempLeases = new List<Lease>();
-            Leases = GenericDB.GenericRead<Lease>("Lease");//Static Leases, so need update Leases in case there are insert in DB
+            
             foreach (Lease l in Leases)
             {
 
@@ -37,7 +37,7 @@ namespace CPRG214.Marina.Domain
                 SlipID = slipId,
             };
             GenericDB.GenericInsert<Lease>("Lease", newLease);
-            
+            Leases = GenericDB.GenericRead<Lease>("Lease");//Static Leases, so need update Leases after each insert. 
         }
     }
 }
