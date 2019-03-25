@@ -13,6 +13,15 @@ namespace Haotian_Zhang_CPRG214_Assignment1 {
     public partial class LeaseSlipPage {
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// uxDockDropDown control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Haotian_Zhang_CPRG214_Assignment1 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView uxRelatedSlipGrid;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
         /// ObjectDataSourceRelatedSlip control.

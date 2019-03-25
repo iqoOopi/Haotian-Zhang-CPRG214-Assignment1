@@ -21,14 +21,13 @@ namespace Haotian_Zhang_CPRG214_Assignment1
 
         }
 
-        protected void uxRelatedSlipGrid_SelectedIndexChanged(object sender, GridViewSelectEventArgs e)
+
+        protected void uxRelatedSlipGrid_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int slipId = Convert.ToInt32(uxRelatedSlipGrid.Rows[e.NewSelectedIndex].Cells[0].Text);
+            int slipId = Convert.ToInt32(uxRelatedSlipGrid.SelectedRow.Cells[0].Text);
             int customerId = Convert.ToInt32(Session["customer"]);
-            LeaseManager.addLease(customerId,slipId);
+            LeaseManager.addLease(customerId, slipId);
             uxGvHistory.DataBind();
-
         }
-
     }
 }

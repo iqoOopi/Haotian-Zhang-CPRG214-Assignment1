@@ -42,7 +42,7 @@ namespace CPRG214.Framework.Data
             }
             FieldToSqlSyntax.Length--;//remove the last ","
 
-            using (SqlConnection connection = MarinaDB.GetConnection())//using method could auto close resources, so the connection got closed automatically
+            using (SqlConnection connection = DBObject.GetConnection())//using method could auto close resources, so the connection got closed automatically
             {
                 //The select Sql Syntax
                 string selectStatement = "SELECT " + FieldToSqlSyntax + " " +
@@ -189,7 +189,7 @@ namespace CPRG214.Framework.Data
             if (sqlCon == null)
             {
                 useOutsideConnection = false;
-                sqlCon = MarinaDB.GetConnection();
+                sqlCon = DBObject.GetConnection();
             }
 
             //prepare the sql syntax for concurrency check
@@ -332,7 +332,7 @@ namespace CPRG214.Framework.Data
             if (sqlCon == null)
             {
                 useOutsideConnection = false;
-                sqlCon = MarinaDB.GetConnection();
+                sqlCon = DBObject.GetConnection();
             }
 
             //prepare the sql syntax for Where for concurrency check
@@ -426,7 +426,7 @@ namespace CPRG214.Framework.Data
             if (sqlCon == null)
             {
                 useOutsideConnection = false;
-                sqlCon = MarinaDB.GetConnection();
+                sqlCon = DBObject.GetConnection();
             }
 
             //prepare the sql syntax for Where for concurrency check

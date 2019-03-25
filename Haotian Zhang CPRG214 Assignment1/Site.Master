@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/inlandmarina_banner.jpg" Width="700px" />
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/inlandmarina_banner.jpg" Width="700px" style="display:block;margin:auto"/>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

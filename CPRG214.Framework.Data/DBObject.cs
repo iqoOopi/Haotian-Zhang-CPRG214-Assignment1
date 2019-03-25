@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace CPRG214.Framework.Data
 {
-    public static class MarinaDB
+    public class DBObject
     {
+        private DBObject() { }
         public static SqlConnection GetConnection()
         {
             string connectionString = @"Data Source=localhost\Sqlexpress;Initial Catalog=Marina;Integrated Security=True";
