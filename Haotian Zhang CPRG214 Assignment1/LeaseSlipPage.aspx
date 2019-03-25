@@ -7,10 +7,10 @@
     <asp:GridView ID="uxRelatedSlipGrid" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSourceRelatedSlip" AllowPaging="True" OnSelectedIndexChanged="uxRelatedSlipGrid_SelectedIndexChanged" CssClass="table" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" >
         <Columns>
             <asp:BoundField DataField="ID" HeaderText="ID" SortExpression="ID" />
-            <asp:BoundField DataField="DockID" HeaderText="DockID" SortExpression="DockID" />
             <asp:BoundField DataField="Width" HeaderText="Width" SortExpression="Width" />
             <asp:BoundField DataField="Length" HeaderText="Length" SortExpression="Length" />
-            <asp:CommandField ButtonType="Button" SelectText="Lease" ShowSelectButton="True" />
+            <asp:BoundField DataField="DockID" HeaderText="DockID" SortExpression="DockID" />
+            <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#000066" />
         <HeaderStyle BackColor="#006699" Font-Bold="True" ForeColor="White" />
@@ -23,7 +23,7 @@
         <SortedDescendingHeaderStyle BackColor="#00547E" />
     </asp:GridView>
     <asp:Label ID="Label3" runat="server" Text="Your Order History:"></asp:Label>
-    <asp:ObjectDataSource ID="ObjectDataSourceRelatedSlip" runat="server" SelectMethod="relatedSlips" TypeName="CPRG214.Marina.Domain.SlipManager">
+    <asp:ObjectDataSource ID="ObjectDataSourceRelatedSlip" runat="server" SelectMethod="relatedAvailSlips" TypeName="CPRG214.Marina.Domain.SlipManager">
         <SelectParameters>
             <asp:ControlParameter ControlID="uxDockDropDown" DefaultValue="1" Name="Id" PropertyName="SelectedValue" Type="Int32" />
         </SelectParameters>

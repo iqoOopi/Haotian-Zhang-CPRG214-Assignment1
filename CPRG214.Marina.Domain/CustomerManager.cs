@@ -13,9 +13,18 @@ namespace CPRG214.Marina.Domain
 
         static CustomerManager()
         {
-            Customers = GenericDB.GenericRead<Customer>("Customer");
+            try
+            {
+                Customers = GenericDB.GenericRead<Customer>("Customer");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
-        public static int LogIn (string firstName,string lastName,string phone,string city)
+        public static int Registe(string firstName,string lastName,string phone,string city)
         {
             int ID = -1;
             //check if the customer already existing
@@ -34,7 +43,14 @@ namespace CPRG214.Marina.Domain
                     Phone = phone,
                     City = city
                 };
-                ID=GenericDB.GenericInsert<Customer>("Customer", newCus);
+                try
+                {
+                    ID = GenericDB.GenericInsert<Customer>("Customer", newCus);
+                } catch(Exception ex)
+                {
+                    throw new Exception(ex.Message, ex);
+                }
+
             }
 
 

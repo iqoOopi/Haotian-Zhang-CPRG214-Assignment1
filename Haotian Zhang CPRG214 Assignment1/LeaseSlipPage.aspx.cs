@@ -26,7 +26,10 @@ namespace Haotian_Zhang_CPRG214_Assignment1
         {
             int slipId = Convert.ToInt32(uxRelatedSlipGrid.SelectedRow.Cells[0].Text);
             int customerId = Convert.ToInt32(Session["customer"]);
-            LeaseManager.addLease(customerId, slipId);
+            LeaseManager.addLease(customerId, slipId);//add new lease
+            //refresh 2 grids
+            uxRelatedSlipGrid.DataBind();
+            uxRelatedSlipGrid.SelectedIndex = -1;
             uxGvHistory.DataBind();
         }
     }

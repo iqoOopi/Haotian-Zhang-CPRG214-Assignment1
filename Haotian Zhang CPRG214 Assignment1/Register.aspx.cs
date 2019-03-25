@@ -17,7 +17,7 @@ namespace Haotian_Zhang_CPRG214_Assignment1
 
         protected void uxOK_Click(object sender, EventArgs e)
         {
-            int ID = CustomerManager.LogIn(uxFirstName.Text, uxLastName.Text, uxPhone.Text,uxCity.Text);
+            int ID = CustomerManager.Registe(uxFirstName.Text, uxLastName.Text, uxPhone.Text,uxCity.Text);
             if (ID != -1)
             {
                 Session["customer"] = ID;

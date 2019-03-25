@@ -12,7 +12,16 @@ namespace CPRG214.Marina.Domain
         public static List<Dock> Docks { get; private set; }
         static DockManager()
         {
-            Docks = GenericDB.GenericRead<Dock>("Dock");
+            try
+            {
+                Docks = GenericDB.GenericRead<Dock>("Dock");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
         public static List<Dock> AvailDocks()
         {
